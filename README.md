@@ -13,7 +13,7 @@ To deploy:
 2. Go to **Settings > Pages** in GitHub.
 3. Select the branch (usually `main`) and `/root` as the folder.
 4. Your site will be live at:  
-https://your-username.github.io/raphaels-horizon/
+https://albert-raphael.github.io/raphaelshorizon-site/
 
 ## 📬 Contact
 For inquiries:
