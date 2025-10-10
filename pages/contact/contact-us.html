@@ -1,43 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us — Raphael’s Horizon</title>
+    <title>Contact Us — Raphael's Horizon</title>
     <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        .contact-us-page {
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+            min-height: calc(100vh - 80px);
+        }
+
+        .contact-us-page .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-header {
+            margin-bottom: 3rem;
+        }
+
+        .contact-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .contact-header p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-info-sidebar {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .contact-info-sidebar h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-email {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .contact-email .icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-email div h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-email div p {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--light-bg);
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .contact-form-container {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form-container h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        #response-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 968px) {
+            .contact-us-page .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-us-page {
+                padding: 5rem 1rem 3rem;
+            }
+            
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-form-container,
+            .contact-info-sidebar {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form-container,
+            .contact-info-sidebar {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../books.html">Books</a>
-            <a href="../about/index.html">About</a>
-            <a href="index.html">Contact</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="https://your-blog-link.com" target="_blank" rel="noopener noreferrer">Visit Our Blog</a>
-            <a href="https://yourothersite.com" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a>
-        </nav>
-    </header>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Raphael's Horizon - Unveiling God's Promises through Boundless Possibilities. Explore books, teachings, and inspirational content.">
+  <title>Raphael’s Horizon — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/books.html">Books</a></li>
+        <li><a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer">Visit Our Blog</a></li>
+        <li><a href="https://raphaelshorizon.wordpress.com/" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a></li>
+        <li class="dropdown"><a href="#">About <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="pages/about/about-us.html">About Us</a>
+            <a href="pages/about/assimagbe-albert-raphael.html">Assimagbe Albert Raphael</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#">Contact <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="pages/contact/index.html">Contact Us</a>
+            <a href="pages/contact/speaking-request.html">Speaking Request</a>
+            <a href="pages/contact/privacy-policy.html">Privacy Policy</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Contact Us</h1>
-        <p>You can reach us by filling in a form or sending us an email. (Add your real content here.)</p>
+    <!-- CONTACT US CONTENT -->
+    <main class="contact-us-page">
+        <div class="container">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <div class="contact-header">
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Send a Message</h2>
+                    <form id="professional-contact-form" method="POST" action="https://script.google.com/macros/s/AKfycbyeY1Liyrf9zNgmkx6wsJyMOcTN4poakQwEQ6oiP1KdF9egjtsa2sU4vUVFd0kWnyd0pQ/exec">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">Send Message</button>
+                        <div id="response-message"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info-sidebar">
+                <h3>Get In Touch</h3>
+                
+                <div class="contact-details">
+                    <div class="contact-email">
+                        <div class="icon">📧</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@raphaelshorizon.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/raphaelshorizon" class="social-link" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <span>FB</span>
+                    </a>
+                    <a href="https://www.instagram.com/raphaelshorizon" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <span>IG</span>
+                    </a>
+                    <a href="https://www.twitter.com/raphaelshorizon" class="social-link" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <span>TW</span>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCTy8tWlPm6oy8yCvpwwhMEw" class="social-link" target="_blank" rel="noopener noreferrer" title="YouTube">
+                        <span>YT</span>
+                    </a>
+                    <a href="https://t.me/raphaelshorizon" class="social-link" target="_blank" rel="noopener noreferrer" title="Telegram">
+                        <span>TG</span>
+                    </a>
+                    <a href="https://www.amazon.com/author/assimagbe" class="social-link" target="_blank" rel="noopener noreferrer" title="Amazon">
+                        <span>AM</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../books.html">Books</a>
-            <a href="../about/index.html">About</a>
-            <a href="index.html">Contact</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="https://your-blog-link.com" target="_blank" rel="noopener noreferrer">Visit Our Blog</a>
-            <a href="https://yourothersite.com" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a>
-        </nav>
-        <p>© 2025 Raphael’s Horizon</p>
-    </footer>
-</body>
+     <!-- CALL TO ACTION -->
+  <section class="cta">
+    <h2>Stay Connected</h2>
+    <p>Follow Raphael’s Horizon for updates, books, teachings, and upcoming events.</p>
+    <div class="cta-buttons">
+      <a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn">Visit Blog</a>
+      <a href="pages/contact/speaking-request.html" class="btn">Speaking Request</a>
+      <a href="https://www.facebook.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Facebook</a>
+      <a href="https://www.instagram.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
+      <a href="https://www.twitter.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Twitter</a>
+      <a href="https://www.youtube.com/channel/UCTy8tWlPm6oy8yCvpwwhMEw" target="_blank" rel="noopener noreferrer" class="btn">YouTube</a>
+      <a href="https://t.me/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Telegram</a>
+      <a href="https://www.amazon.com/author/assimagbe" target="_blank" rel="noopener noreferrer" class="btn">Amazon</a>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/about/index.html">About</a></li>
+        <li><a href="pages/books.html">Books</a></li>
+        <li><a href="pages/contact/index.html">Contact</a></li>
+        <li><a href="pages/contact/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer">Visit Our Blog</a></li>
+        <li><a href="https://raphaelshorizon.wordpress.com/" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a></li>
+      </ul>
+    </nav>
+    <p>© 2025 Raphael’s Horizon — All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+    <script>
+        const form = document.getElementById('professional-contact-form');
+        const responseMessage = document.getElementById('response-message');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitButton = form.querySelector('.submit-button');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    responseMessage.textContent = 'Your message has been sent successfully! We will get back to you soon.';
+                    responseMessage.className = 'success';
+                    responseMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        responseMessage.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Failed to send message');
+                }
+            } catch (error) {
+                responseMessage.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly.';
+                responseMessage.className = 'error';
+                responseMessage.style.display = 'block';
+            } finally {
+                // Reset button state
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+</body>
 </html>

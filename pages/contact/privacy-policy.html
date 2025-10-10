@@ -1,78 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Raphael’s Horizon</title>
+    <title>Privacy Policy — Raphael's Horizon</title>
     <link rel="stylesheet" href="../../css/styles.css">
-</head>
+    <style>
+        .privacy-policy {
+            padding: 6rem 2rem 4rem;
+            background: var(--white);
+            min-height: calc(100vh - 80px);
+        }
 
+        .privacy-policy .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--light-bg);
+        }
+
+        .policy-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .policy-header .last-updated {
+            color: var(--text-color);
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .policy-content {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .policy-section h3 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem 0;
+            font-weight: 500;
+        }
+
+        .policy-section p {
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-policy {
+                padding: 5rem 1rem 3rem;
+            }
+            
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .policy-section {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
 <body>
+    <!-- HEADER -->
     <header>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../books.html">Books</a>
-            <a href="../about/index.html">About</a>
-            <a href="index.html">Contact</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="https://your-blog-link.com" target="_blank" rel="noopener noreferrer">Visit Our Blog</a>
-            <a href="https://yourothersite.com" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../books.html">Books</a></li>
+                <li><a href="../about/index.html">About</a></li>
+                <li><a href="index.html">Contact</a></li>
+                <li><a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                <li><a href="https://raphaelshorizon.wordpress.com/" target="_blank" rel="noopener noreferrer">WordPress</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Privacy Policy</h1>
+    <!-- PRIVACY POLICY CONTENT -->
+    <main class="privacy-policy">
+        <div class="container">
+            <div class="policy-header">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: January 2025</p>
+            </div>
 
-        <h2>Introduction</h2>
-        <p>At Raphael's Horizon, we respect your privacy and are committed to protecting it through compliance with this policy. In this privacy policy, the words “we,” “our,” and “us” refer to Raphael's Horizon.</p>
+            <div class="policy-content">
+                <section class="policy-section">
+                    <h2>Introduction</h2>
+                    <p>At Raphael's Horizon, we respect your privacy and are committed to protecting it through compliance with this policy. In this privacy policy, the words "we," "our," and "us" refer to Raphael's Horizon.</p>
+                    
+                    <p>This policy describes the types of information we may collect from you or that you may provide when you visit our website, including https://raphaelshorizon.com and any other website owned and operated by us (collectively our "Website"), and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
+                    
+                    <p>This policy also applies to information we collect:</p>
+                    
+                    <ul>
+                        <li>When you contact us by mail, telephone, e-mail, text, or other electronic means.</li>
+                        <li>Through our mobile applications (the "Application").</li>
+                        <li>When you interact with our advertising and applications on third-party websites and services.</li>
+                        <li>When you support us through donations.</li>
+                        <li>When you otherwise access our programs, products, or services, or communicate with us.</li>
+                    </ul>
+                    
+                    <p>Please read this policy carefully to understand our practices regarding your information and how we will treat it. By accessing or using this Website, you agree to this privacy policy. If you do not agree with it, your choice is not to use our Website.</p>
+                </section>
 
-        <p>This policy describes the types of information we may collect from you or that you may provide when you visit our website, including <a href="https://raphaelshorizon.com">https://raphaelshorizon.com</a> and any other website owned and operated
-            by us (collectively our "Website"), and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
+                <section class="policy-section">
+                    <h2>Information We Collect</h2>
+                    <h3>Personal Information</h3>
+                    <p>We may collect personal information that you voluntarily provide to us, including:</p>
+                    <ul>
+                        <li>Name and contact information (email address, phone number, mailing address)</li>
+                        <li>Demographic information</li>
+                        <li>Payment information for donations or purchases</li>
+                        <li>Communication preferences</li>
+                    </ul>
+                    
+                    <h3>Automatically Collected Information</h3>
+                    <p>When you visit our Website, we may automatically collect:</p>
+                    <ul>
+                        <li>IP address and browser type</li>
+                        <li>Pages visited and time spent on site</li>
+                        <li>Referring website information</li>
+                        <li>Device information</li>
+                    </ul>
+                </section>
 
-        <h2>Are Children Allowed to Use Our Site?</h2>
-        <p>Our Website and Application are not intended for children under 13 years of age. ...</p>
+                <section class="policy-section">
+                    <h2>How We Use Your Information</h2>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Provide and maintain our services</li>
+                        <li>Process your requests and transactions</li>
+                        <li>Send you updates and spiritual content</li>
+                        <li>Improve our website and services</li>
+                        <li>Communicate with you about events and opportunities</li>
+                    </ul>
+                </section>
 
-        <h2>What Information Do We Collect About You and How?</h2>
-        <ul>
-            <li><strong>Personal Information</strong>: name, postal address, email, phone, etc.</li>
-            <li><strong>Behavioral Tracking</strong>: activities on our site.</li>
-            <li><strong>Technical Information</strong>: IP addresses, cookies, etc.</li>
-        </ul>
-
-        <h2>How We Use Your Information</h2>
-        <p>We use the information we collect to manage our activities, communicate with you, process donations, improve our website, and fulfill other purposes.</p>
-
-        <h2>Disclosure of Your Information</h2>
-        <p>We may disclose information to service providers, affiliates, or legal authorities when required.</p>
-
-        <h2>Your Choices</h2>
-        <p>You can opt out of emails, update/delete your info by emailing us.</p>
-
-        <h2>Data Security</h2>
-        <p>We use reasonable measures, but no method is 100% secure.</p>
-
-        <h2>Changes to This Privacy Policy</h2>
-        <p>We may update this policy from time to time. Updates will be posted on this page.</p>
-
-        <h2>Contact Us</h2>
-        <p>
-            Raphael's Horizon<br> Email: <a href="mailto:info@raphaelshorizon.com">info@raphaelshorizon.com</a><br> Website: <a href="https://raphaelshorizon.com" target="_blank">raphaelshorizon.com</a>
-        </p>
+                <section class="policy-section">
+                    <h2>Contact Information</h2>
+                    <div class="contact-info">
+                        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                        <p><strong>Email:</strong> info@raphaelshorizon.com</p>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <nav>
-            <a href="../../index.html">Home</a>
-            <a href="../books.html">Books</a>
-            <a href="../about/index.html">About</a>
-            <a href="index.html">Contact</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="https://your-blog-link.com" target="_blank" rel="noopener noreferrer">Visit Our Blog</a>
-            <a href="https://yourothersite.com" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a>
-        </nav>
-        <p>© 2025 Raphael’s Horizon</p>
-    </footer>
-</body>
+     <!-- CALL TO ACTION -->
+  <section class="cta">
+    <h2>Stay Connected</h2>
+    <p>Follow Raphael’s Horizon for updates, books, teachings, and upcoming events.</p>
+    <div class="cta-buttons">
+      <a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn">Visit Blog</a>
+      <a href="pages/contact/speaking-request.html" class="btn">Speaking Request</a>
+      <a href="https://www.facebook.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Facebook</a>
+      <a href="https://www.instagram.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
+      <a href="https://www.twitter.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Twitter</a>
+      <a href="https://www.youtube.com/channel/UCTy8tWlPm6oy8yCvpwwhMEw" target="_blank" rel="noopener noreferrer" class="btn">YouTube</a>
+      <a href="https://t.me/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Telegram</a>
+      <a href="https://www.amazon.com/author/assimagbe" target="_blank" rel="noopener noreferrer" class="btn">Amazon</a>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/about/index.html">About</a></li>
+        <li><a href="pages/books.html">Books</a></li>
+        <li><a href="pages/contact/index.html">Contact</a></li>
+        <li><a href="pages/contact/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer">Visit Our Blog</a></li>
+        <li><a href="https://raphaelshorizon.wordpress.com/" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a></li>
+      </ul>
+    </nav>
+    <p>© 2025 Raphael’s Horizon — All Rights Reserved.</p>
+  </footer>
+</body>
 </html>
