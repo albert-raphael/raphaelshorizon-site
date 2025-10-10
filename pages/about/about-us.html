@@ -1,97 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Raphael's Horizon - Unveiling God's Promises through Boundless Possibilities. Explore books, teachings, and inspirational content.">
-  <title>Raphael’s Horizon — Home</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Raphael's Horizon - Our mission, vision, values, and the story behind our ministry.">
+    <meta name="keywords" content="Raphael's Horizon, About Us, Christian ministry, spiritual guidance, inspirational books">
+    <title>About Us — Raphael's Horizon</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        /* About Us Page Specific Styles */
+        .page-hero {
+            padding: calc(var(--header-height) + 4rem) 0 4rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .page-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: var(--space-lg);
+            color: var(--white);
+        }
+
+        .page-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: var(--space-xl);
+        }
+
+        .page-content {
+            padding: var(--space-xxl) 0;
+            background: var(--light-bg);
+        }
+
+        .content-section {
+            max-width: 1000px;
+            margin: 0 auto var(--space-xxl);
+            background: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+        }
+
+        .content-section h3 {
+            color: var(--primary-light);
+            margin: var(--space-lg) 0 var(--space-md);
+        }
+
+        .content-section p {
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+            color: var(--text-color);
+        }
+
+        .content-section ul {
+            margin: var(--space-md) 0;
+            padding-left: var(--space-lg);
+        }
+
+        .content-section li {
+            margin-bottom: var(--space-sm);
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: var(--space-lg);
+            background: var(--light-bg);
+            border-radius: var(--radius-lg);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-light);
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-label {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: calc(var(--header-height) + 2rem) 0 2rem;
+            }
+
+            .content-section {
+                padding: var(--space-lg);
+                margin-bottom: var(--space-xl);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card {
+                padding: var(--space-md);
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="pages/books.html">Books</a></li>
-        <li><a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer">Visit Our Blog</a></li>
-        <li><a href="https://raphaelshorizon.wordpress.com/" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a></li>
-        <li class="dropdown"><a href="#">About <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-content">
-            <a href="pages/about/about-us.html">About Us</a>
-            <a href="pages/about/assimagbe-albert-raphael.html">Assimagbe Albert Raphael</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#">Contact <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-content">
-            <a href="pages/contact/index.html">Contact Us</a>
-            <a href="pages/contact/speaking-request.html">Speaking Request</a>
-            <a href="pages/contact/privacy-policy.html">Privacy Policy</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <div class="nav-brand">
+                    <a href="../../index.html" class="logo-link">
+                        <img src="../../assets/icons/logo-square.png" alt="Raphael's Horizon" class="nav-logo">
+                        <span class="brand-name">Raphael's Horizon</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../books.html" class="nav-link">Books</a></li>
+                    <li class="nav-dropdown">
+                        <a href="index.html" class="nav-link dropdown-toggle active">
+                            About <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="about-us.html" class="dropdown-link active">About Us</a>
+                            <a href="assimagbe-albert-raphael.html" class="dropdown-link">Assimagbe Albert Raphael</a>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="../contact/index.html" class="nav-link dropdown-toggle">
+                            Contact <span class="dropdown-arrow">▼</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../contact/index.html" class="dropdown-link">Contact Us</a>
+                            <a href="../contact/speaking-request.html" class="dropdown-link">Speaking Request</a>
+                            <a href="../contact/privacy-policy.html" class="dropdown-link">Privacy Policy</a>
+                        </div>
+                    </li>
+                    <li><a href="https://raphaelshorizon.blogspot.com/" class="nav-link external" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                    <li><a href="https://raphaelshorizon.wordpress.com/" class="nav-link external" target="_blank" rel="noopener noreferrer">WordPress</a></li>
+                </ul>
 
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <main>
-    <div class="banner-container">
-    <img src="assets/icons/logo-square.png" alt="Raphael’s Horizon Banner">
-    <p class="banner-caption">
-      Unleashing Faith, Inspiring Purpose, and Embracing Limitless Horizons
-    </p>
-  </div>
+    <!-- ABOUT US HERO SECTION -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>About Raphael's Horizon</h1>
+                <p>Discover the mission, vision, and divine inspiration behind our journey of unveiling God's promises through boundless possibilities.</p>
+                <div class="hero-actions">
+                    <a href="#our-story" class="btn btn-primary">Our Story</a>
+                    <a href="#our-mission" class="btn btn-secondary">Our Mission</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h1>About Raphael’s Horizon</h1>
+    <!-- ABOUT US CONTENT -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Our Story Section -->
+            <div id="our-story" class="content-section">
+                <h2>Our Story</h2>
+                <p>Raphael's Horizon was born from a divine calling to illuminate the path of spiritual discovery and empower individuals to recognize and fulfill their God-given purpose. Founded on the unwavering belief in God's promises, our ministry has grown into a beacon of hope and inspiration for countless seekers worldwide.</p>
+                
+                <p>What began as a personal journey of faith has blossomed into a global movement dedicated to unveiling the extraordinary plans God has for each of His children. Through transformative teachings, inspirational books, and practical guidance, we strive to help individuals navigate life's challenges while embracing the boundless possibilities available through faith.</p>
 
-    <p>Raphael’s Horizon is a platform dedicated to providing inspirational and motivational content.</p>
+                <div class="highlight-box">
+                    <h3>Our Divine Mandate</h3>
+                    <p>"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11</p>
+                </div>
+            </div>
 
-    <h2>Mission Statement</h2>
-    <p>Our mission is to uplift and empower individuals through meaningful and thought-provoking content.</p>
+            <!-- Mission & Vision Section -->
+            <div id="our-mission" class="content-section">
+                <h2>Our Mission & Vision</h2>
+                
+                <h3>Our Mission</h3>
+                <p>To illuminate the path of spiritual discovery by providing transformative teachings, inspirational books, and practical guidance that help individuals recognize and fulfill their divine purpose through God's unwavering promises.</p>
+                
+                <h3>Our Vision</h3>
+                <p>To create a global community where every individual experiences the transformative power of God's love, discovers their unique purpose, and embraces the boundless possibilities available through faith and spiritual growth.</p>
 
-    <h2></h2>Vision Statement</h2>
-    <p>We envision a world where everyone is inspired to pursue their dreams and live a purposeful life.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Books Published</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Lives Impacted</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Countries Reached</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Digital Presence</span>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Our Dedication</h2>
-    <p>At Raphael’s Horizon, we are dedicated to the pursuit of unveiling God’s promises through boundless possibilities. With faith as our guide, we embark on a journey of exploration, unwavering in our commitment to wisdom and understanding. As we step into uncharted territories, our spirits soar with the assurance of God’s guidance and the abundance of His blessings. Embrace the path of faith and discovery, for it is through unwavering trust that we unveil the extraordinary promises that God has in store for us.</p>
+            <!-- What We Do Section -->
+            <div id="what-we-do" class="content-section">
+                <h2>What We Do</h2>
+                
+                <h3>Inspirational Publications</h3>
+                <p>We create spiritually enriching books and content that provide practical wisdom for personal and spiritual growth. Our publications are designed to transform perspectives and renew minds according to biblical principles.</p>
+                
+                <h3>Spiritual Guidance</h3>
+                <p>Through our digital platforms and ministry outreach, we offer spiritual guidance for navigating life's challenges and walking in God-given authority.</p>
+                
+                <h3>Community Building</h3>
+                <p>We foster a supportive global community for spiritual development, creating spaces for believers to connect, grow, and encourage one another in their faith journeys.</p>
+                
+                <h3>Teaching & Discipleship</h3>
+                <p>Our teachings focus on helping individuals understand their identity in Christ and operate in the fullness of their divine potential.</p>
+            </div>
 
-    <h2>Vision Statement</h2>
-    <p>We envision a world where everyone is inspired to pursue their dreams and live a purposeful life.</p>
+            <!-- Our Approach Section -->
+            <div id="our-approach" class="content-section">
+                <h2>Our Approach</h2>
+                <p>At Raphael's Horizon, we believe in a holistic approach to spiritual growth that combines:</p>
+                
+                <ul>
+                    <li><strong>Biblical Foundation:</strong> All our teachings are rooted in Scripture and guided by the Holy Spirit</li>
+                    <li><strong>Practical Application:</strong> We provide actionable insights that can be applied to daily life</li>
+                    <li><strong>Personal Transformation:</strong> Our focus is on heart transformation, not just information</li>
+                    <li><strong>Community Support:</strong> We emphasize the importance of walking together in faith</li>
+                    <li><strong>Innovative Methods:</strong> We embrace modern technology to spread God's eternal message</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    <h2>Our Dedication</h2>
-    <p>At Raphael’s Horizon, we are dedicated to the pursuit of unveiling God’s promises through boundless possibilities. With faith as our guide, we embark on a journey of exploration, unwavering in our commitment to wisdom and understanding. As we step into uncharted territories, our spirits soar with the assurance of God’s guidance and the abundance of His blessings. Embrace the path of faith and discovery, for it is through unwavering trust that we unveil the extraordinary promises that God has in store for us.</p>
+    <!-- CALL TO ACTION -->
+    <section class="about-cta">
+        <div class="container">
+            <h2>Join Our Journey of Faith</h2>
+            <p>Become part of our growing community and discover how God's promises can transform your life and expand your horizons.</p>
+            <div class="cta-buttons">
+                <a href="../books.html" class="btn btn-primary">Explore Our Books</a>
+                <a href="../contact/index.html" class="btn btn-secondary">Get In Touch</a>
+                <a href="assimagbe-albert-raphael.html" class="btn btn-outline">Meet Our Founder</a>
+            </div>
+        </div>
+    </section>
 
-   <!-- CALL TO ACTION -->
-  <section class="cta">
-    <h2>Stay Connected</h2>
-    <p>Follow Raphael’s Horizon for updates, books, teachings, and upcoming events.</p>
-    <div class="cta-buttons">
-      <a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn">Visit Blog</a>
-      <a href="pages/contact/speaking-request.html" class="btn">Speaking Request</a>
-      <a href="https://www.facebook.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Facebook</a>
-      <a href="https://www.instagram.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Instagram</a>
-      <a href="https://www.twitter.com/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Twitter</a>
-      <a href="https://www.youtube.com/channel/UCTy8tWlPm6oy8yCvpwwhMEw" target="_blank" rel="noopener noreferrer" class="btn">YouTube</a>
-      <a href="https://t.me/raphaelshorizon" target="_blank" rel="noopener noreferrer" class="btn">Telegram</a>
-      <a href="https://www.amazon.com/author/assimagbe" target="_blank" rel="noopener noreferrer" class="btn">Amazon</a>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../../assets/icons/logo-square.png" alt="Raphael's Horizon" class="footer-logo">
+                    <div class="footer-mission">
+                        <h3>Raphael's Horizon</h3>
+                        <p>Unveiling God's Promises through Boundless Possibilities</p>
+                    </div>
+                </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <nav class="footer-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="pages/about/index.html">About</a></li>
-        <li><a href="pages/books.html">Books</a></li>
-        <li><a href="pages/contact/index.html">Contact</a></li>
-        <li><a href="pages/contact/privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="https://raphaelshorizon.blogspot.com/" target="_blank" rel="noopener noreferrer">Visit Our Blog</a></li>
-        <li><a href="https://raphaelshorizon.wordpress.com/" target="_blank" rel="noopener noreferrer">Visit Our Other Site</a></li>
-      </ul>
-    </nav>
-    <p>© 2025 Raphael’s Horizon — All Rights Reserved.</p>
-  </footer>
+                <nav class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../../index.html">Home</a></li>
+                            <li><a href="../books.html">Books</a></li>
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="../contact/index.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav-column">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="assimagbe-albert-raphael.html">Our Founder</a></li>
+                            <li><a href="../contact/speaking-request.html">Speaking</a></li>
+                            <li><a href="../contact/privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:info@raphaelshorizon.com">info@raphaelshorizon.com</a></li>
+                            <li>
+                                <div class="footer-social">
+                                    <a href="https://www.facebook.com/raphaelshorizon" aria-label="Facebook">FB</a>
+                                    <a href="https://www.instagram.com/raphaelshorizon" aria-label="Instagram">IG</a>
+                                    <a href="https://www.youtube.com/@raphaelshorizon" aria-label="YouTube">YT</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Raphael's Horizon. All Rights Reserved. | Unveiling God's Promises Through Boundless Possibilities</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+    <script>
+        // About Us Page JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('.main-header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Animation for stat cards
+            const statCards = document.querySelectorAll('.stat-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            statCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
 </html>
